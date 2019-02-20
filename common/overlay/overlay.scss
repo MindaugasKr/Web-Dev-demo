@@ -1,0 +1,95 @@
+.overlay {
+
+    line-height: 1;
+
+    $check-box-size: 30px;
+    $button-width: 150px;
+    $gray-extra-light: rgb(241, 241, 241);
+
+    &__container {
+        position: fixed;
+        right: 0;
+        top: 70%;
+        font-size: 0;
+    }
+
+    &__checkbox {
+        display: inline-block;
+        vertical-align: top;
+        opacity: 0;
+        margin: 0;
+        width: $check-box-size;
+        height: $check-box-size;
+
+        &:hover ~ .overlay__display-btn {
+            background-color: lightgray;
+            color: black;
+        }
+
+        &:checked ~ .overlay__display-btn--hide {
+            display: none;
+        }
+        &:checked ~ .overlay__display-btn--show {
+            display: block;
+        }
+        &:checked ~ .overlay__link-container {
+            display: none;
+        }
+    }
+
+    &__display-btn {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+
+        //background-color: white;
+        //color: black;
+        background-color: rgb(0, 57, 153);
+        background-color: rgb(255, 168, 0);
+        color: white;
+
+        font-weight: bold;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 15px;
+        text-align: center;
+        /* vertical centering */
+        line-height: $check-box-size;
+
+        width: $check-box-size;
+        height: $check-box-size;
+
+        //border: solid 1px lightgray;
+        //border-right: none;
+
+        &--show {
+        display: none;
+        }
+    }
+
+    &__link-container {
+        display: inline-block;
+        width: $button-width;
+        border: solid 1px lightgray;
+
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);;
+    }
+        &__link {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            border-bottom: solid 1px lightgray;
+            color: black;
+            font-size: 15px;
+            background-color: white;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background-color: lightgray;
+            }
+        }
+}

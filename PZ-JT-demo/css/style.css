@@ -39,6 +39,69 @@ html {
   #SECTION- templates
 \*------------------------------------*/
 /*------------------------------------*\
+  #SECTION- reusable objects
+\*------------------------------------*/
+.overlay {
+  line-height: 1; }
+  .overlay__container {
+    position: fixed;
+    right: 0;
+    top: 70%;
+    font-size: 0; }
+  .overlay__checkbox {
+    display: inline-block;
+    vertical-align: top;
+    opacity: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px; }
+    .overlay__checkbox:hover ~ .overlay__display-btn {
+      background-color: lightgray;
+      color: black; }
+    .overlay__checkbox:checked ~ .overlay__display-btn--hide {
+      display: none; }
+    .overlay__checkbox:checked ~ .overlay__display-btn--show {
+      display: block; }
+    .overlay__checkbox:checked ~ .overlay__link-container {
+      display: none; }
+  .overlay__display-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-color: #003999;
+    background-color: #ffa800;
+    color: white;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    text-align: center;
+    /* vertical centering */
+    line-height: 30px;
+    width: 30px;
+    height: 30px; }
+    .overlay__display-btn--show {
+      display: none; }
+  .overlay__link-container {
+    display: inline-block;
+    width: 150px;
+    border: solid 1px lightgray;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25); }
+  .overlay__link {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: solid 1px lightgray;
+    color: black;
+    font-size: 15px;
+    background-color: white; }
+    .overlay__link:last-of-type {
+      border-bottom: none; }
+    .overlay__link:hover {
+      background-color: lightgray; }
+
+/*------------------------------------*\
   #SECTION- parts
 \*------------------------------------*/
 /* Main grid block */
