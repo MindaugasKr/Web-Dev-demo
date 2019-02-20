@@ -1,0 +1,68 @@
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+body, button, p, h1, h2, h3, h4, h5, h6, ul {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+.overlay__container {
+  position: fixed;
+  right: 0;
+  top: 70%;
+  font-size: 0; }
+.overlay__checkbox {
+  display: inline-block;
+  vertical-align: top;
+  opacity: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px; }
+  .overlay__checkbox:hover ~ .overlay__display-btn {
+    background-color: lightgray; }
+  .overlay__checkbox:checked ~ .overlay__display-btn--hide {
+    display: none; }
+  .overlay__checkbox:checked ~ .overlay__display-btn--show {
+    display: block; }
+  .overlay__checkbox:checked ~ .overlay__link-container {
+    display: none; }
+.overlay__display-btn {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+  /* vertical centering */
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  border: solid 1px lightgray;
+  border-right: none; }
+  .overlay__display-btn--show {
+    display: none; }
+.overlay__link-container {
+  display: inline-block;
+  width: 150px;
+  border: solid 1px lightgray; }
+.overlay__link {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: solid 1px lightgray;
+  color: black;
+  font-size: 15px;
+  background-color: white; }
+  .overlay__link:last-of-type {
+    border-bottom: none; }
+  .overlay__link:hover {
+    background-color: lightgray; }
+
+/*# sourceMappingURL=style.css.map */
