@@ -1,0 +1,89 @@
+//output:../PZ-JT.html
+DOCKTYPE
+html
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(charset="utf-8")
+        meta(name="description" content="Page design based on graphics designs of Piet Zwart and Jan Tschichold")
+        title -45&#176;
+        
+        meta(name="author" content="MK")
+
+        link(href="css/style.css" rel="stylesheet" type="text/css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    body
+        div(class="main-grid")
+        
+            // header
+            h1(class="header__primary") DESIGN
+            h2(class="header__secondary") Based on
+                | WORK by
+            p(class="header__tertiary") Piet Zwart 
+                | and
+                | Jan Tschichold
+            // same as above - to be able to position words one by one
+            // header__secondary
+            span(class="hs-1") Based 
+            span(class="hs-2") on 
+            span(class="hs-3") WORK 
+            span(class="hs-4") by
+            // header__tertiary
+            span(class="ht-1") Piet Zwart 
+            span(class="ht-2") and 
+            span(class="ht-3") Jan Tschichold
+            
+            // main
+            nav(class="nav")
+                button(class="nav__btn") link
+                button(class="nav__btn") link
+                button(class="nav__btn") link
+                button(class="nav__btn") link
+                button(class="nav__btn") link
+                
+            p(class="landing-paragrapth")   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ipsam laboriosam obcaecati itaque error tempora officia, cum libero nemo ut, doloribus sapiente dolores animi deleniti. Dolores quia saepe consequuntur nisi ipsum mollitia porro non ad, ullam facere nam provident minus cumque possimus, vel excepturi blanditiis laborum delectus veniam? Nesciunt, eum.
+                
+            div(class="social-block")
+                a(class="social-link") <i class="fab fa-facebook"></i>
+                a(class="social-link") <i class="fab fa-twitter"></i>
+                a(class="social-link") <i class="fab fa-instagram"></i>
+                a(class="social-link") <i class="fab fa-linkedin-in"></i>
+                
+            footer(class="footer")
+                &copy 2019 copyright information
+                
+            // decorations for tablet
+            div(class="decor-container-tablet-grid")
+                div(class="decor-container-tablet"  style="grid-column: 2; grid-row: 1;")
+                    div(class="decor-child-t-8  decor  decor--dashed-horiz  decor--b-accent3")
+                    div(class="decor-child-t-9  decor  decor--bar-horiz  decor--accent3")
+                    div(class="decor-child-t-10  decor  decor--bar-horiz  decor--accent3")
+                div(class="decor-container-tablet"  style="grid-column: 2; grid-row: 2;")
+                    div(class="decor-child-t-5  decor  decor--square-mid  decor--accent2")
+                    div(class="decor-child-t-6  decor  decor--square-small  decor--accent1")
+                div(class="decor-container-tablet"  style="grid-column: 3; grid-row: 1;")
+                    div(class="decor-child-t-1  decor  decor--dashed-vert  decor--b-accent2")
+                div(class="decor-container-tablet"  style="grid-column: 3; grid-row: 2;")
+                    div(class="decor-child-t-2  decor  decor--bar-vert  decor--accent1")
+                    div(class="decor-child-t-3  decor  decor--bar-vert  decor--accent1")
+                div(class="decor-container-tablet"  style="grid-column: 3; grid-row: 3;")
+                    div(class="decor-child-t-4  decor  decor--dashed-horiz  decor--b-accent3")
+                    div(class="decor-child-t-7  decor  decor--bar-horiz  decor--accent3")
+
+            // decorations for pc, big and small
+            div(class="decor-container-pc-small  decor-container-pc-big"  style="grid-column: 1; grid-row: 1;")
+                div(class="decor-child-2  decor  decor--dashed-horiz  decor--b-accent2")
+            div(class="decor-container-pc-small  decor-container-pc-big"  style="grid-column: 1; grid-row: 2;")
+                div(class="decor-child-4  decor  decor--dashed-horiz  decor--b-accent2")
+            div(class="decor-container-pc-small  decor-container-pc-big"  style="grid-column: 3; grid-row: 1;")
+                div(class="decor-child-5  decor  decor--square-mid  decor--accent2")
+                div(class="decor-child-6  decor  decor--square-small  decor--accent1")
+            div(class="decor-container-pc-small  decor-container-pc-big"  style="grid-column: 3; grid-row: 3;")
+                div(class="decor-child-10  decor  decor--bar-vert  decor--accent3")
+                div(class="decor-child-11  decor  decor--dashed-vert  decor--b-accent3")
+            div(class="decor-container-pc-small  decor-container-pc-big"  style="grid-column: 4; grid-row: 1;")
+                div(class="decor-child-7  decor  decor--bar-vert  decor--accent3")
+                div(class="decor-child-8  decor  decor--dashed-vert  decor--b-accent3")
+                div(class="decor-child-9  decor  decor--bar-vert  decor--accent3")
+            div(class="decor-container-pc-small  decor-container-pc-big"  style="grid-column: 4; grid-row: 2;")
+                div(class="decor-child-1  decor  decor--bar-horiz  decor--accent1")
+                div(class="decor-child-3  decor  decor--bar-horiz  decor--accent1")

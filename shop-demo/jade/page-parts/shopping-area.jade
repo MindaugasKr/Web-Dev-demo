@@ -1,0 +1,123 @@
+main(class="shopping-area  grid-shopping-area  content-wrapper-outer")
+    div(class="shop-filter-area")
+        form(action="")
+        
+            div(class="shop-filter-section")
+                h3 Category
+                label(class="checkbox-container") Category 1
+                    input(class="checkbox"  type="checkbox"  name=""  value="")
+                    span(class="checkmark  checkmark--0") <i class="far fa-square"></i>
+                    span(class="checkmark  checkmark--1") <i class="far fa-check-square"></i>
+                br
+                label(class="checkbox-container") Category 2
+                    input(class="checkbox"  type="checkbox"  name=""  value="")
+                    span(class="checkmark  checkmark--0") <i class="far fa-square"></i>
+                    span(class="checkmark  checkmark--1") <i class="far fa-check-square"></i>
+                br
+                label(class="checkbox-container") Category 3
+                    input(class="checkbox"  type="checkbox"  name=""  value="")
+                    span(class="checkmark  checkmark--0") <i class="far fa-square"></i>
+                    span(class="checkmark  checkmark--1") <i class="far fa-check-square"></i>
+                br
+                label(class="checkbox-container") Category 4
+                    input(class="checkbox"  type="checkbox"  name=""  value="")
+                    span(class="checkmark  checkmark--0") <i class="far fa-square"></i>
+                    span(class="checkmark  checkmark--1") <i class="far fa-check-square"></i>
+                br
+                label(class="checkbox-container") Category 5
+                    input(class="checkbox"  type="checkbox"  name=""  value="")
+                    span(class="checkmark  checkmark--0") <i class="far fa-square"></i>
+                    span(class="checkmark  checkmark--1") <i class="far fa-check-square"></i>
+            
+            div(class="section-divider")
+            
+            div(class="shop-filter-section")
+                h3 Filter by shop            
+                label(class="checkbox-container") None
+                    input(class="checkbox"  type="radio"  name="shop-location"  value="")
+                    span(class="checkmark  checkmark--0") <i class="far fa-circle"></i>
+                    span(class="checkmark  checkmark--1") <i class="far fa-dot-circle"></i>
+                br
+                label(class="checkbox-container") Vilnius
+                    input(class="checkbox"  type="radio"  name="shop-location"  value="")
+                    span(class="checkmark  checkmark--0") <i class="far fa-circle"></i>
+                    span(class="checkmark  checkmark--1") <i class="far fa-dot-circle"></i>
+                br
+                label(class="checkbox-container") Kaunas
+                    input(class="checkbox"  type="radio"  name="shop-location"  value="")
+                    span(class="checkmark  checkmark--0") <i class="far fa-circle"></i>
+                    span(class="checkmark  checkmark--1") <i class="far fa-dot-circle"></i>
+                br
+                label(class="checkbox-container") Klaipėda
+                    input(class="checkbox"  type="radio"  name="shop-location"  value="")
+                    span(class="checkmark  checkmark--0") <i class="far fa-circle"></i>
+                    span(class="checkmark  checkmark--1") <i class="far fa-dot-circle"></i>
+            
+            div(class="section-divider")
+            
+            div(class="shop-filter-section")
+                h3 Price range
+                span Max:
+                    input(type="text"  name=""  value="")
+                br
+                span Min:
+                    input(type="text"  name=""  value="")
+            
+            div(class="section-divider  section-divider--invisible")
+            
+            input(class="btn  btn--submit"  type="submit" value="Update")
+            
+    div(class="shop-search-area")
+        input(class="input-text"  type="search" placeholder="Search")
+        button(class="shop__search-btn  btn  btn--submit") <i class="fas fa-search"></i>
+        
+    // shop-settings-area
+    input(class="shop__display-radio-list"  checked  type="radio"  name="shop-view-type")
+    button(class="shop__display-btn-list  btn  btn--display-settings") <i class="fas fa-list"></i>
+    input(class="shop__display-radio-grid"  type="radio"  name="shop-view-type")
+    button(class="shop__display-btn-grid  btn  btn--display-settings") <i class="fas fa-th"></i>
+    
+    
+    
+    div(class="shop-product-area")
+        div(class="product")
+            div(class="product__img-block")
+                img(class="product__img"  src="images/products/desctop-pc.png")
+            div(class="product__text-block")
+                h3(class="product__title") Product name
+                p(class="product__description")  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    span(class="product__description-extended") Earum soluta officiis, voluptate minus tenetur itaque, fugit illum, dolorem aspernatur quisquam dicta id distinctio voluptatum placeat. Cumque molestias, numquam atque adipisci. Ducimus numquam placeat asperiores consectetur cumque voluptate aperiam provident, corrupti soluta expedita praesentium suscipit quisquam. Maiores, blanditiis aliquid aut. Vitae.
+                span(class="product__price") 70 &#8364;
+        div(class="product")
+            div(class="product__img-block")
+                img(class="product__img"  src="images/products/Samsung Laptop.png")
+            div(class="product__text-block")
+                h3(class="product__title") Product name
+                p(class="product__description")  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    span(class="product__description-extended") Earum soluta officiis, voluptate minus tenetur itaque, fugit illum, dolorem aspernatur quisquam dicta id distinctio voluptatum placeat. Cumque molestias, numquam atque adipisci. Ducimus numquam placeat asperiores consectetur cumque voluptate aperiam provident, corrupti soluta expedita praesentium suscipit quisquam. Maiores, blanditiis aliquid aut. Vitae.
+                span(class="product__price") 70 &#8364;
+        div(class="product")
+            div(class="product__img-block")
+                img(class="product__img"  src="images/products/Microsoft-Surface-Pro-4.png")
+            div(class="product__text-block")
+                h3(class="product__title") Product name
+                p(class="product__description")  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    span(class="product__description-extended") Earum soluta officiis, voluptate minus tenetur itaque, fugit illum, dolorem aspernatur quisquam dicta id distinctio voluptatum placeat. Cumque molestias, numquam atque adipisci. Ducimus numquam placeat asperiores consectetur cumque voluptate aperiam provident, corrupti soluta expedita praesentium suscipit quisquam. Maiores, blanditiis aliquid aut. Vitae.
+                span(class="product__price") 70 &#8364;
+        div(class="product")
+            div(class="product__img-block")
+                img(class="product__img"  src="images/products/Fire-Tablet.png")
+            div(class="product__text-block")
+                h3(class="product__title") Product name
+                p(class="product__description")  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    span(class="product__description-extended") Earum soluta officiis, voluptate minus tenetur itaque, fugit illum, dolorem aspernatur quisquam dicta id distinctio voluptatum placeat. Cumque molestias, numquam atque adipisci. Ducimus numquam placeat asperiores consectetur cumque voluptate aperiam provident, corrupti soluta expedita praesentium suscipit quisquam. Maiores, blanditiis aliquid aut. Vitae.
+                span(class="product__price") 70 &#8364;
+    
+    div(class="shop-breadcrumbs")
+        button(class="btn--breadcrumbs") <i class="fas fa-caret-left"></i>
+        button(class="btn--breadcrumbs  btn--breadcrumbs-active") 1
+        button(class="btn--breadcrumbs") 2
+        button(class="btn--breadcrumbs") 3
+        button(class="btn--breadcrumbs") ...
+        button(class="btn--breadcrumbs  btn--breadcrumbs-last") Last
+        button(class="btn--breadcrumbs") <i class="fas fa-caret-right"></i>

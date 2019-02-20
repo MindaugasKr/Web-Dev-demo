@@ -1,0 +1,54 @@
+@media screen and (min-width: $pc-big) {
+    @supports (display:grid) and ((writing-mode: tb) or (writing-mode: vertical-lr)) {
+        .main-grid {
+            transform: rotateZ(-45deg);
+
+            margin-left: 150px;
+            margin-top: 20px;
+        }
+        /*
+        body {
+            padding-left: 1000px;
+            padding-top: 100px;
+        }
+        */
+        .header__primary {
+            font-size: 150px;
+        }
+        .header__secondary {
+            font-size: 60px;
+        }
+        .header__tertiary {
+            font-size: 40px;
+        }
+        .landing-paragrapth {
+            max-height: 400px;
+            writing-mode: vertical-rl;
+            justify-self: end;
+        }
+        .social-block {
+            display: block;
+        }
+
+
+
+        /* decorations: */
+        .decor-container-pc-big {display: block}
+
+        .decor-child-1 {
+            top: 40px;
+        }
+        .decor-child-2 {
+            bottom: -20px;
+            left: -100px;
+        }
+        .decor-child-3 {
+            right: 0;
+            bottom: 40px;
+        }
+        .decor-child-4 {
+            bottom: 20px;
+            right: 0;
+        }
+    }
+}

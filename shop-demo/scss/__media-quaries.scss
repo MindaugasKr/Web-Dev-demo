@@ -1,0 +1,192 @@
+/* top bar */
+@media screen and (max-width: 900px) {
+    .shop__display-radio-grid:checked ~.shop-product-area
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn--top-bar {
+        width: 100%;
+        border-bottom: solid 1px lightgray;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .top-bar {
+        &__btn-menu {
+            display: block;
+            width: auto;
+
+            &:focus ~.top-bar__container-btn {
+                display: block;
+            }
+        }
+        &__container-btn {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            text-align: center;
+        }
+    }
+    .ad {
+        &__content-block {
+            flex-direction: column-reverse;
+            padding: 40px;
+            justify-content: space-around;
+        }
+        &__img {
+            max-width: 80%;
+        }
+        &__text-block {
+            padding: 0;
+            align-self: auto;
+        }
+        &__btn-CTA,
+        &__em-text,
+        &__info {
+            display: none;
+        }
+    }
+}
+
+
+/* top navigation */
+@media screen and (max-width: 600px) {
+    .top-nav {
+        flex-direction: column;
+        border-bottom: none;
+
+        &__btn {
+            text-align: left;
+            width: 100%;
+            border: none;
+            border-bottom: solid 1px lightgray;
+        }
+        &__drop-container {
+            //display: block;
+            position: static;
+            border: none;
+        }
+        &__btn--drop {
+            padding-left: 40px;
+        }
+        &__btn--slide {
+            padding-left: 60px;
+        }
+    }
+}
+
+
+/* shopping area */
+@media screen and (max-width: 700px) {
+    .grid-shopping-area {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+        " filters  "
+        " search "
+        " settings "
+        " product "
+        " breadcrumbs "
+        ;
+    }
+
+    .shop-filter-area {
+        padding: 10px 20px;
+
+        // OPTIMIZE: possible future conflicts due to
+        // increased specifisity
+        & .btn--submit {
+            display: block;
+        }
+    }
+    .shop-filter-section {
+        display: inline-block;
+        padding: 20px;
+        vertical-align: top;
+    }
+
+    // OPTIMIZE: possible future conflicts due to
+    // increased specifisity
+    .shopping-area .section-divider {
+        display: none;
+    }
+
+    /* adjust display setting btn position */
+    .shop__display-radio-list,
+    .shop__display-btn-list {
+        margin-left: 0px;
+    }
+    .shop__display-radio-grid,
+    .shop__display-btn-grid {
+        margin-left: 30px;
+    }
+
+    .shop-search-area {
+        padding: 30px 0;
+        justify-self: stretch;
+    }
+    // OPTIMIZE: possible future conflicts due to
+    // increased specifisity
+    .shop-search-area .input-text{
+        width: 100%;
+        min-width: unset;
+    }
+}
+@media screen and (max-width: 500px) {
+    .shop__display-radio-grid:checked ~.shop-product-area
+    {
+        grid-template-columns: 1fr;
+    }
+
+    /* turns display list into display grid
+    *  with additional text
+    */
+    .product {flex-direction: column;}
+    .product__img-block
+    {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* footer */
+@media screen and (max-width: 700px) {
+    .footer {
+        &__social-area {
+            flex-wrap: wrap;
+        }
+        &__social-block {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+
+            // OPTIMIZE: possible future conflicts due to
+            // increased specifisity
+            & .input-text {
+                width: 100%;
+                min-width: unset;
+                margin-bottom: 20px;
+            }
+            // OPTIMIZE: possible future conflicts due to
+            // increased specifisity
+            &  .push-to-right {
+                margin-left: 0
+            }
+        }
+        &__link-area {
+            flex-direction: column;
+            //justify-content: center;
+        }
+        &__link-block {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+}

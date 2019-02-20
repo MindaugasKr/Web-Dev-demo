@@ -1,0 +1,507 @@
+/*------------------------------------*\
+  #SECTION- normalise
+\*------------------------------------*/
+/*------------------------------------*\
+  #SECTION- normalise
+\*------------------------------------*/
+/*------------------------------------*\
+  #SECTION- Project Meta
+\*------------------------------------*/
+/*------------------------------------*\
+  #SECTION- reset / changing defoults
+\*------------------------------------*/
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+body, button, p, h1, h2, h3, h4, h5, h6, ul {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+/*------------------------------------*\
+  #SECTION- Color scheme
+\*------------------------------------*/
+/*------------------------------------*\
+  #SECTION- general
+\*------------------------------------*/
+/*------------------------------------*\
+  #SECTION- typography
+\*------------------------------------*/
+html {
+  font-family: Arial, Helvetica, sans-serif; }
+
+/*------------------------------------*\
+  #SECTION- grid
+\*------------------------------------*/
+/*------------------------------------*\
+  #SECTION- templates
+\*------------------------------------*/
+/*------------------------------------*\
+  #SECTION- parts
+\*------------------------------------*/
+/* Main grid block */
+.main-grid {
+  padding: 30px 60px; }
+
+/* Header */
+.header__primary {
+  font-weight: 800;
+  font-size: 80px;
+  display: block;
+  grid-area: hp; }
+
+.header__secondary {
+  font-weight: 600;
+  font-size: 60px;
+  grid-area: hs; }
+
+.header__tertiary {
+  font-weight: 400;
+  font-size: 40px;
+  grid-area: ht; }
+
+/* header__secondary as separate elements */
+.hs-1 {
+  grid-area: hs-1; }
+
+.hs-2 {
+  grid-area: hs-2; }
+
+.hs-3 {
+  grid-area: hs-3; }
+
+.hs-4 {
+  grid-area: hs-4; }
+
+[class^="hs-"] {
+  display: none;
+  font-weight: 600;
+  font-size: 50px; }
+
+/* header__tertiary as separate elements */
+.ht-1 {
+  grid-area: ht-1; }
+
+.ht-2 {
+  grid-area: ht-2; }
+
+.ht-3 {
+  grid-area: ht-3; }
+
+[class^="ht-"] {
+  display: none;
+  font-weight: 400;
+  font-size: 30px; }
+
+/* Navigation */
+.nav {
+  background-color: #eb2478;
+  grid-area: nav; }
+
+.nav__btn {
+  background-color: #eb2478;
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px; }
+
+.nav__btn:hover {
+  background-color: #ee3e88; }
+
+/* Text on landing page */
+.landing-paragrapth {
+  display: inline-block;
+  width: 100%;
+  grid-area: text;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  line-height: 1.5; }
+
+/* Social media block */
+.social-block {
+  padding: 8px 16px;
+  grid-area: social; }
+
+.social-link {
+  color: #292929;
+  display: inline-block;
+  font-size: 22px;
+  padding: 3px; }
+
+.social-link:hover {
+  color: gray; }
+
+/* Footer */
+.footer {
+  color: white;
+  background-color: gray;
+  padding: 8px 16px;
+  grid-area: footer; }
+
+/* Decorations - lines and squares */
+/* box-shadow it works:
+*
+*    position CONTAINER in cell where you want
+*    decorative element to be placed
+*
+*    div container must have name base on use
+*    [decor-container] .......
+*
+*    child div must have unique name
+*    [decor-child]...
+*
+*    give div child apropriate classes
+*
+*    fine tune child element in @media
+*/
+[class^="decor-container"] {
+  display: none;
+  position: relative;
+  z-index: -2;
+  align-self: stretch;
+  justify-self: stretch; }
+
+.decor {
+  position: absolute;
+  z-index: -1;
+  /* for bar lines and squares */
+  /* for bar lines */
+  /* for squares */
+  /* for dashed lines */ }
+  .decor--accent1 {
+    background-color: #eb2478; }
+  .decor--accent2 {
+    background-color: rgba(143, 255, 0, 0.7); }
+  .decor--accent3 {
+    background-color: lightgray; }
+  .decor--bar-horiz {
+    width: 100vw;
+    height: 20px; }
+  .decor--bar-vert {
+    height: 100vh;
+    width: 20px; }
+  .decor--square-small {
+    width: 25%;
+    height: 25%; }
+  .decor--square-mid {
+    width: 75%;
+    height: 75%; }
+  .decor--square-big {
+    width: 100%;
+    height: 100%; }
+  .decor--dashed-vert {
+    width: 1px;
+    height: 100vh;
+    border-left-style: dashed;
+    border-left-width: 5px; }
+  .decor--dashed-horiz {
+    height: 1px;
+    width: 100vw;
+    border-top-style: dashed;
+    border-top-width: 5px; }
+  .decor--b-accent1 {
+    border-color: #eb2478; }
+  .decor--b-accent2 {
+    border-color: rgba(143, 255, 0, 0.7); }
+  .decor--b-accent3 {
+    border-color: lightgray; }
+
+/*------------------------------------*\
+  #SECTION- Media Queries
+\*------------------------------------*/
+/* for mobile */
+@media screen and (max-width: 414px) {
+  @supports (display: grid) {
+    .main-grid {
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: repeat(6, min-content) auto repeat(2, min-content);
+      grid-template-areas: " hp     hp " " hs-1   ht-1 " " ht-2   hs-2 " " hs-3   ht-3 " " hs-4   ht-3 " " nav    nav " " text   text " " social social " " footer footer "; }
+
+    .header__primary {
+      font-size: 70px;
+      text-align: center;
+      margin: 5px 0; }
+
+    .header__secondary {
+      display: none; }
+
+    .header__tertiary {
+      display: none; }
+
+    [class^="hs-"],
+    [class^="ht-"] {
+      display: block;
+      align-self: center; }
+
+    .hs-1, .ht-2, .hs-3, .hs-4 {
+      text-align: right; }
+
+    .nav {
+      text-align: center;
+      background-color: inherit;
+      margin-top: 15px; }
+
+    .nav__btn {
+      width: 100%;
+      margin: 2px 0; }
+
+    .landing-paragrapth {
+      padding: 16px 32px; } } }
+/* for wide mobile and narrot tablets */
+@media screen and (min-width: 415px) and (max-width: 800px) {
+  @supports (display: grid) and ((writing-mode: tb) or (writing-mode: vertical-lr)) {
+    .main-grid {
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr  min-content 1fr;
+      grid-template-rows: repeat(4, min-content) auto repeat(2, min-content);
+      grid-template-areas: " ... hp hs " " ... hp ... " " ht hp ... " " nav nav nav " " text text text " " social social social " " footer footer footer "; }
+
+    .header__primary {
+      writing-mode: tb;
+      writing-mode: vertical-lr;
+      transform: rotateZ(180deg);
+      font-size: 80px; }
+
+    .header__secondary {
+      font-size: 50px; }
+
+    .header__tertiary {
+      font-size: 30px;
+      justify-self: end;
+      text-align: right; }
+
+    .nav {
+      text-align: center; }
+
+    /* decorations: */
+    .decor-container-tablet-grid {
+      display: block;
+      overflow: hidden;
+      grid-column: 1/4;
+      grid-row: 1/4;
+      display: grid;
+      /* outer columns for centering content */
+      grid-template-columns: auto repeat(3, 138px) auto;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: " ... ... ... ... ... " " ... ... ... ... ... " " ... ... ... ... ... "; }
+
+    .decor-container-tablet {
+      display: block; }
+
+    [class*="--bar-horiz"] {
+      height: 15px; }
+
+    [class*="--bar-vert"] {
+      width: 15px; }
+
+    [class*="--dashed-horiz"] {
+      border-top-width: 4px; }
+
+    [class*="--dashed-vert"] {
+      border-left-width: 4px; }
+
+    /* lines crossing DESIGN and green dashed */
+    .decor-child-t-1 {
+      left: calc(50% - 40px); }
+
+    .decor-child-t-2 {
+      top: -10px;
+      right: calc(50% - 22px); }
+
+    .decor-child-t-3 {
+      bottom: 40px;
+      left: calc(50% - 22px); }
+
+    /*  */
+    .decor-child-t-4 {
+      top: 25%; }
+
+    /* squares */
+    .decor-child-t-5 {
+      left: 20%;
+      bottom: 0;
+      width: 55%; }
+
+    .decor-child-t-6 {
+      right: 0;
+      top: 0; }
+
+    /* gray at top left */
+    .decor-child-t-8 {
+      left: 0;
+      bottom: 85px; }
+
+    .decor-child-t-9 {
+      right: 0;
+      bottom: 30px; }
+
+    .decor-child-t-10 {
+      right: 0;
+      bottom: 50px;
+      height: 30px; } } }
+/* for narrow PC / tablets / kindle */
+/* overlaps with upward media quarie
+*/
+@media screen and (min-width: 801px) {
+  @supports (display: grid) and ((writing-mode: tb) or (writing-mode: vertical-lr)) {
+    .main-grid {
+      display: grid;
+      grid-template-columns: auto repeat(5, min-content) auto;
+      grid-template-rows: min-content;
+      grid-template-areas: " text   ht     ...    ...  ...  ...  ... " " text   hp     hp     hp   hp   hp   ... " " text   social footer hs   nav  nav  ... " " text   ...    footer hs   nav  nav  ... "; }
+
+    .header__primary {
+      font-size: 100px;
+      line-height: 1; }
+
+    .header__secondary {
+      font-size: 40px;
+      writing-mode: vertical-rl;
+      text-align: left;
+      justify-self: start;
+      align-self: start; }
+
+    .header__tertiary {
+      font-size: 27px;
+      writing-mode: vertical-rl;
+      text-align: right;
+      justify-self: start;
+      align-self: start;
+      align-self: end; }
+
+    .nav {
+      background-color: inherit; }
+
+    .nav__btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 30px; }
+
+    .social-block {
+      justify-self: start;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto; }
+
+    .social-link {
+      display: inline-block; }
+
+    .footer {
+      writing-mode: vertical-rl;
+      justify-self: end; }
+
+    /* decorations: */
+    .decor-container-pc-small {
+      display: block; }
+
+    .decor-child-1 {
+      top: 20px; }
+
+    .decor-child-2 {
+      bottom: -10px;
+      left: -100px; }
+
+    .decor-child-3 {
+      right: 0;
+      bottom: 20px; }
+
+    .decor-child-4 {
+      bottom: 10px;
+      right: 0; }
+
+    .decor-child-5 {
+      top: 0;
+      left: 0; }
+
+    .decor-child-6 {
+      right: 0;
+      bottom: 0; }
+
+    .decor-child-7 {
+      bottom: 0;
+      left: 30px; }
+
+    .decor-child-8 {
+      bottom: -500px;
+      left: 165px;
+      height: 150vh; }
+
+    .decor-child-9 {
+      bottom: 0;
+      left: 60px;
+      width: 100px; }
+
+    .decor-child-10 {
+      top: -150px;
+      height: 100vh; }
+
+    .decor-child-11 {
+      top: -150px;
+      left: -20px;
+      height: 100vh; } } }
+/* for desktop */
+@media screen and (min-width: 1050px) {
+  @supports (display: grid) and ((writing-mode: tb) or (writing-mode: vertical-lr)) {
+    .main-grid {
+      transform: rotateZ(-45deg);
+      margin-left: 150px;
+      margin-top: 20px; }
+
+    /*
+    body {
+        padding-left: 1000px;
+        padding-top: 100px;
+    }
+    */
+    .header__primary {
+      font-size: 150px; }
+
+    .header__secondary {
+      font-size: 60px; }
+
+    .header__tertiary {
+      font-size: 40px; }
+
+    .landing-paragrapth {
+      max-height: 400px;
+      writing-mode: vertical-rl;
+      justify-self: end; }
+
+    .social-block {
+      display: block; }
+
+    /* decorations: */
+    .decor-container-pc-big {
+      display: block; }
+
+    .decor-child-1 {
+      top: 40px; }
+
+    .decor-child-2 {
+      bottom: -20px;
+      left: -100px; }
+
+    .decor-child-3 {
+      right: 0;
+      bottom: 40px; }
+
+    .decor-child-4 {
+      bottom: 20px;
+      right: 0; } } }
+/*------------------------------------*\
+  #SECTION- animations
+\*------------------------------------*/
+
+/*# sourceMappingURL=style.css.map */

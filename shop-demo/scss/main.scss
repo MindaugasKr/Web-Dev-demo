@@ -1,0 +1,429 @@
+// ---------compileExpanded: ../css/style.css
+
+/*------------------------------------*\
+  #SECTION- normalise
+\*------------------------------------*/
+
+//------------------------------------
+//  #SECTION- variables
+//------------------------------------
+$max-width-content: 1500px;
+$t-input-and-btn-height: 40px;
+
+//------------------------------------
+//  #SECTION- functions
+//------------------------------------
+@import "__functions.scss";
+
+//------------------------------------
+//  #SECTION- mixins
+//------------------------------------
+
+/*------------------------------------*\
+  #SECTION- Project Meta
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #SECTION- reset / changing defoults
+\*------------------------------------*/
+@import "__resets.scss";
+
+/*------------------------------------*\
+  #SECTION- Color scheme
+\*------------------------------------*/
+
+/* un-used */
+$color: (
+    primary: rgb(31, 51, 83),
+    secondary: rgb(252, 220, 0),
+);
+
+/*------------------------------------*\
+  #SECTION- generic
+\*------------------------------------*/
+@import "__generic.scss";
+
+/*------------------------------------*\
+  #SECTION- typography
+\*------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+
+ html {
+     font-family: Arial, Helvetica, sans-serif;
+     line-height: 1.5;
+ }
+
+/*------------------------------------*\
+  #SECTION- grid
+\*------------------------------------*/
+@import "__grid.scss";
+
+/*------------------------------------*\
+  #SECTION- reusable functional classes
+\*------------------------------------*/
+@import "__reusable-functional-classes.scss";
+
+/*------------------------------------*\
+  #SECTION- reusable objects
+\*------------------------------------*/
+@import "__reusable-objects.scss";
+
+/*------------------------------------*\
+  #SECTION- page parts
+\*------------------------------------*/
+
+.top-bar {
+    grid-area: top-bar;
+
+    background-color: black;
+    color: white;
+
+    &__btn-menu {
+        display: none;
+        position: relative;
+    }
+    &__container-btn {
+        background-color: inherit;
+        color: inherit;
+    }
+}
+
+.ad-area {
+    grid-area: ad-area;
+
+    overflow-x: hidden;
+    white-space: nowrap;
+    position: relative;
+
+    /* to remove undesired gaps */
+    font-size: 0;
+}
+    .ad__slide {
+        display: inline-block;
+        width: 100%;
+        height: 400px;
+
+        position: relative;
+        overflow: hidden;
+
+        &--back1 {
+            background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9));
+            background-size: contain;
+            background-position: center;
+        }
+        &--back2 {}
+        &--back3 {
+            background-image: url("../images/tan-vintage-paper-texture-9-780x1243.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+    }
+        .ad__content-block {
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .ad__text-block {
+                padding-right: 50px;
+                padding-bottom: 100px;
+                align-self: flex-end;
+            }
+            .ad__title {font-size: 36px;}
+            .ad__em-text {
+                font-size: 24px;
+                font-weight: bolder;
+                color: red;
+            }
+            .ad__img {max-height: 80%;}
+    .ad__slide-btn-1,
+    .ad__slide-btn-2,
+    .ad__slide-btn-3 {
+        position: absolute;
+        bottom: 20px;
+        z-index: 10;
+    }
+    .ad__slide-btn-1 {left: calc(50% - 30px);}
+    .ad__slide-btn-2 {left: 50%;}
+    .ad__slide-btn-3 {left: calc(50% + 30px);}
+        .ad__slide-btn-1:focus ~.ad__slideshow {
+            animation: none;
+            margin-left: 0%;
+        }
+        .ad__slide-btn-2:focus ~.ad__slideshow {
+            animation: none;
+            margin-left: -100%;
+        }
+        .ad__slide-btn-3:focus ~.ad__slideshow {
+            animation: none;
+            margin-left: -200%;
+        }
+
+    .ad__slideshow {
+        $ad-slideshow-view-t: 3s !global;
+        $ad-slideshow-transition-t: 1s !global;
+        $ad-slideshow-return-t: 1s;
+        $ad-slideshow-total-t:
+            ($ad-slideshow-view-t * 3) +
+            ($ad-slideshow-transition-t * 2) +
+            $ad-slideshow-return-t !global;
+        animation: slideshow $ad-slideshow-total-t;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+.top-nav {
+    grid-area: top-nav;
+
+    display: flex;
+    justify-content: center;
+
+    //position: relative;
+    //z-index: 2;
+
+    background-color: white;
+
+    border-top: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+
+    font-size: 15px;
+
+    &__drop-container {
+        z-index: 1;
+        background-color: white;
+        //border-left: solid 2px red;
+        //box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+        border: solid 1px lightgray;
+    }
+    &__btn {
+        background-color: inherit;
+        color: inherit;
+        font-size: inherit;
+
+        display: block;
+        border: none;
+        padding: 10px 20px;
+        letter-spacing: 1px;
+    }
+        &__btn:hover {
+            background-color: lightgray;
+        }
+    &__btn--slide,
+    &__btn--drop {
+        width: 100%;
+        white-space: nowrap;
+        text-align: left;
+        border-bottom: solid 1px rgb(240, 240, 240);
+    }
+}
+
+.shopping-area {
+    grid-area: shopping-area;
+
+    $top-and-bottom-padding: 50px;
+    padding-top: $top-and-bottom-padding;
+    padding-bottom: $top-and-bottom-padding;
+}
+    .shop-filter-area {
+        grid-area: filters;
+
+        align-self: start;
+
+        border: solid 3px green;
+        border-radius: 5px;
+        padding: 30px;
+    }
+    .shop-search-area {
+        grid-area: search;
+
+        display: flex;
+
+        justify-self: end;
+    }
+        .shop__search-btn {
+            width: $t-input-and-btn-height;
+        }
+    .shop-product-area {
+        grid-area: product;
+
+        padding: 40px 20px;
+    }
+
+        .product {
+            display: flex;
+            margin: 20px 0;
+
+            $product-img-dimention: 200px;
+            &__img-block {
+                flex-basis: $product-img-dimention;
+                flex-grow: 0;
+                flex-shrink: 0;
+                height: $product-img-dimention;
+                width: $product-img-dimention;
+                //background-color: cyan;
+            }
+                &__img {
+                    height: $product-img-dimention;
+                    width: $product-img-dimention;
+                    //background-color: magenta;
+                    object-fit: contain;
+                }
+            &__text-block {
+                padding: 0 40px;
+            }
+                &__title {}
+                &__description {}
+                &__description-extended {}
+                &__price {
+                    font-weight: bolder;
+                }
+
+            &:hover {
+                outline: solid 1px lightgray;
+            }
+        }
+    .shop-breadcrumbs {
+        grid-area: breadcrumbs;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+    }
+    /* shop-settings-area */
+    /* Shop display choice (grid vs list) controled by radio inputs
+    *  but buttons with apropriate icons used to visualy identify them.
+    *  Buttons them selves do nothing, since display
+    *  settings work without any js.
+    */
+    .shop__display-radio-list,
+    .shop__display-radio-grid,
+    .shop__display-btn-list,
+    .shop__display-btn-grid {
+        grid-area: settings;
+        justify-self: start;
+
+        width: 30px;
+        height: 30px;
+    }
+    .shop__display-radio-list,
+    .shop__display-radio-grid {
+        opacity: 0;
+    }
+    .shop__display-radio-list,
+    .shop__display-btn-list {
+        margin-left: 50px;
+    }
+    .shop__display-radio-grid,
+    .shop__display-btn-grid {
+        margin-left: 80px;
+    }
+        .shop__display-radio-list:checked ~.shop__display-btn-list {
+            background-color: tomato;
+        }
+        .shop__display-radio-grid:checked ~.shop__display-btn-grid {
+            background-color: tomato;
+        }
+        /* change how products are displayed
+        */
+        .shop__display-radio-grid:checked ~.shop-product-area
+        {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .shop__display-radio-grid:checked ~.shop-product-area .product
+        {
+            flex-direction: column;
+        }
+        .shop__display-radio-grid:checked ~.shop-product-area .product .product__img-block
+        {
+            width: 100%;
+            text-align: center;
+        }
+        .shop__display-radio-grid:checked ~.shop-product-area .product .product__img {}
+        .shop__display-radio-grid:checked ~.shop-product-area .product .product__description-extended
+        {
+            display: none;
+        }
+
+.footer {
+    grid-area: footer;
+
+    background-color: rgb(230, 230, 230);
+
+    &__content-area {
+        //padding: 0 30px;
+    }
+
+        &__social-area {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+            &__social-block {
+                display: flex;
+            }
+                &__social-link {
+                    padding: 5px;
+                }
+                &__sign-up-btn {
+                    padding: 10px 20px;
+                }
+
+        &__link-area {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+            &__link-block {
+                padding: 0 20px;
+                text-align: left;
+            }
+                &__link {
+                    display: block;
+                    //color: inherit;
+                    color: rgb(47, 192, 237);
+                }
+
+        &__copyright {
+            color: gray;
+            margin: 20px 0;
+        }
+
+        &__sign-up-btn:hover {
+            // OPTIMIZE: perdaryt i submit btn
+            background-color: red;
+        }
+        &__social-link:hover,
+        &__link:hover {
+            color: gray;
+        }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #SECTION- Media Queries
+\*------------------------------------*/
+
+@import "__media-quaries.scss";
+
+/*------------------------------------*\
+  #SECTION- animations
+\*------------------------------------*/
+
+@keyframes slideshow {
+    // view duration in percent
+    $Rp: 100% * $ad-slideshow-view-t / $ad-slideshow-total-t;
+    // transition time in ercent
+    $Kp: 100% * $ad-slideshow-transition-t / $ad-slideshow-total-t ;
+
+    0% {margin-left: 0%;}
+    #{$Rp} {margin-left: 0%;}
+    #{($Rp + $Kp)} {margin-left: -100%;}
+    #{(($Rp * 2) + $Kp)} {margin-left: -100%;}
+    #{(($Rp * 2) + ($Kp * 2))} {margin-left: -200%;}
+    #{(($Rp * 3) + ($Kp * 2))} {margin-left: -200%;}
+    100% {margin-left: 0%;}
+}

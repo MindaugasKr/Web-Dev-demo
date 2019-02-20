@@ -1,0 +1,247 @@
+
+<DOCKTYPE></DOCKTYPE>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Shop page example"/>
+    <title>Shop</title>
+    <meta name="author" content="MK"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="grid-main">
+      <div class="top-bar">
+        <div class="content-wrapper-outer  d-flex  center-block  relative"><a href="#" class="site-logo">Site Logo</a>
+          <button class="top-bar__btn-menu  btn  btn--top-bar  push-to-right"><i class="fas fa-bars"></i></button>
+          <div class="top-bar__container-btn  d-flex  push-to-right"><a href="#" class="btn  btn--top-bar">About us</a><a href="#" class="btn  btn--top-bar">Delivery</a><a href="#" class="btn  btn--top-bar">Our App</a><a href="#" class="btn  btn--top-bar">Other services</a><a href="#" class="btn  btn--top-bar"><i class="fas fa-map-marker-alt"></i> Location</a><a href="#" class="btn  btn--top-bar"><i class="far fa-comment"></i> Contact us</a></div>
+        </div>
+      </div>
+      <!--        
+      div(class="top-bar")
+          div(class="content-wrapper-outer  d-flex  center-block")
+              a(class="site-logo" href="#") Site Logo
+              a(class="btn  btn--top-bar  push-to-right" href="#") About us
+              a(class="btn  btn--top-bar" href="#") Delivery
+              a(class="btn  btn--top-bar" href="#") Our App
+              a(class="btn  btn--top-bar" href="#") Other services
+              a(class="btn  btn--top-bar" href="#") <i class="fas fa-map-marker-alt"></i> Location
+              a(class="btn  btn--top-bar" href="#") <i class="far fa-comment"></i> Contact us
+      -->
+      <div class="ad-area">
+        <button class="btn--slide-o  ad__slide-btn-1"></button>
+        <button class="btn--slide-o  ad__slide-btn-2"></button>
+        <button class="btn--slide-o  ad__slide-btn-3"></button>
+        <!-- slides:-->
+        <!-- css tuned for 3 slides,-->
+        <!-- adding, rmoving slides woud require-->
+        <!-- to modify css         -->
+        <div class="ad__slide  ad__slide--back1  ad__slideshow">
+          <!-- ad__content-block exist because-->
+          <!-- ad__slide is inline block-->
+          <!-- ad__content-block is flex-->
+          <div class="ad__content-block">
+            <div class="ad__text-block">
+              <h1 style="color: white;" class="ad__title">MacBook Air</h1>
+            </div><img src="images/580b57fbd9996e24bc43bfd0.png" class="ad__img"/>
+          </div>
+        </div>
+        <div class="ad__slide  ad__slide--back2">
+          <div class="background-1"></div>
+          <div class="ad__content-block">
+            <div class="ad__text-block">
+              <h1 class="ad__title">Huawei P8 Lite</h1>
+            </div><img src="images/58ac4dd20aaa10546adf2713.png" class="ad__img"/>
+          </div>
+        </div>
+        <div class="ad__slide  ad__slide--back3">
+          <div class="ad__content-block">
+            <div style="font-family:'EB Garamond', serif;  align-self: center;  padding: 0;" class="ad__text-block">
+              <h1 class="ad__title">Macintosh 128K</h1>
+              <h1 class="ad__title  ad__info  pre">Whopping 128 KB RAM with&#10;7.8336 MHz&#10;Motorola 68000 microprocessor</h1><a style="margin: 20px 0;" href="#" class="ad__btn-CTA  btn  btn--CTA">Order NOW</a>
+              <div class="ad__em-text">Limited edition !!!</div>
+            </div><img src="images/580b57fbd9996e24bc43bfa4.png" class="ad__img"/>
+          </div>
+        </div>
+      </div>
+      <div class="top-nav">
+        <button class="top-nav__btn">Link</button>
+        <button class="top-nav__btn">Link</button>
+        <div class="drop-btn">
+          <button class="top-nav__btn">Drop down</button>
+          <div class="top-nav__drop-container  drop-container">
+            <button class="top-nav__btn  top-nav__btn--drop">Link</button>
+            <button class="top-nav__btn  top-nav__btn--drop">Link</button>
+            <div class="slide-btn">
+              <button class="top-nav__btn  top-nav__btn--drop">Slide left &#187;</button>
+              <div class="top-nav__drop-container  drop-container">
+                <button class="top-nav__btn  top-nav__btn--slide">Link</button>
+                <button class="top-nav__btn  top-nav__btn--slide">Link</button>
+                <button class="top-nav__btn  top-nav__btn--slide">Link</button>
+              </div>
+            </div>
+            <button class="top-nav__btn  top-nav__btn--drop">Link</button>
+          </div>
+        </div>
+        <button class="top-nav__btn">Link</button>
+        <button class="top-nav__btn">Link</button>
+        <button class="top-nav__btn">Link</button>
+      </div>
+      <!--    
+      div(class="top-nav")
+          button(class="top-nav__btn") Link
+          button(class="top-nav__btn") Link
+          
+          span(class="top-nav__btn  drop-btn") Drop down
+              div(class="top-nav__drop-container  drop-container")
+                  button(class="top-nav__btn  top-nav__btn--drop") Link
+                  button(class="top-nav__btn  top-nav__btn--drop") Link
+                  span(class="top-nav__btn    top-nav__btn--drop  slide-btn") Slide left &#187;
+                      div(class="top-nav__drop-container  drop-container")
+                          button(class="top-nav__btn  top-nav__btn--drop") Link
+                          button(class="top-nav__btn  top-nav__btn--drop") Link
+                          button(class="top-nav__btn  top-nav__btn--drop") Link
+                  button(class="top-nav__btn  top-nav__btn--drop") Link
+      
+          button(class="top-nav__btn") Link
+          button(class="top-nav__btn") Link
+          button(class="top-nav__btn") Link
+      -->
+      <main class="shopping-area  grid-shopping-area  content-wrapper-outer">
+        <div class="shop-filter-area">
+          <form action="">
+            <div class="shop-filter-section">
+              <h3>Category</h3>
+              <label class="checkbox-container">Category 1
+                <input type="checkbox" name="" value="" class="checkbox"/><span class="checkmark  checkmark--0"><i class="far fa-square"></i></span><span class="checkmark  checkmark--1"><i class="far fa-check-square"></i></span>
+              </label><br/>
+              <label class="checkbox-container">Category 2
+                <input type="checkbox" name="" value="" class="checkbox"/><span class="checkmark  checkmark--0"><i class="far fa-square"></i></span><span class="checkmark  checkmark--1"><i class="far fa-check-square"></i></span>
+              </label><br/>
+              <label class="checkbox-container">Category 3
+                <input type="checkbox" name="" value="" class="checkbox"/><span class="checkmark  checkmark--0"><i class="far fa-square"></i></span><span class="checkmark  checkmark--1"><i class="far fa-check-square"></i></span>
+              </label><br/>
+              <label class="checkbox-container">Category 4
+                <input type="checkbox" name="" value="" class="checkbox"/><span class="checkmark  checkmark--0"><i class="far fa-square"></i></span><span class="checkmark  checkmark--1"><i class="far fa-check-square"></i></span>
+              </label><br/>
+              <label class="checkbox-container">Category 5
+                <input type="checkbox" name="" value="" class="checkbox"/><span class="checkmark  checkmark--0"><i class="far fa-square"></i></span><span class="checkmark  checkmark--1"><i class="far fa-check-square"></i></span>
+              </label>
+            </div>
+            <div class="section-divider"></div>
+            <div class="shop-filter-section">
+              <h3>Filter by shop            </h3>
+              <label class="checkbox-container">None
+                <input type="radio" name="shop-location" value="" class="checkbox"/><span class="checkmark  checkmark--0"><i class="far fa-circle"></i></span><span class="checkmark  checkmark--1"><i class="far fa-dot-circle"></i></span>
+              </label><br/>
+              <label class="checkbox-container">Vilnius
+                <input type="radio" name="shop-location" value="" class="checkbox"/><span class="checkmark  checkmark--0"><i class="far fa-circle"></i></span><span class="checkmark  checkmark--1"><i class="far fa-dot-circle"></i></span>
+              </label><br/>
+              <label class="checkbox-container">Kaunas
+                <input type="radio" name="shop-location" value="" class="checkbox"/><span class="checkmark  checkmark--0"><i class="far fa-circle"></i></span><span class="checkmark  checkmark--1"><i class="far fa-dot-circle"></i></span>
+              </label><br/>
+              <label class="checkbox-container">Klaipėda
+                <input type="radio" name="shop-location" value="" class="checkbox"/><span class="checkmark  checkmark--0"><i class="far fa-circle"></i></span><span class="checkmark  checkmark--1"><i class="far fa-dot-circle"></i></span>
+              </label>
+            </div>
+            <div class="section-divider"></div>
+            <div class="shop-filter-section">
+              <h3>Price range</h3><span>Max:
+                <input type="text" name="" value=""/></span><br/><span>Min:
+                <input type="text" name="" value=""/></span>
+            </div>
+            <div class="section-divider  section-divider--invisible"></div>
+            <input type="submit" value="Update" class="btn  btn--submit"/>
+          </form>
+        </div>
+        <div class="shop-search-area">
+          <input type="search" placeholder="Search" class="input-text"/>
+          <button class="shop__search-btn  btn  btn--submit"><i class="fas fa-search"></i></button>
+        </div>
+        <!-- shop-settings-area-->
+        <input checked="checked" type="radio" name="shop-view-type" class="shop__display-radio-list"/>
+        <button class="shop__display-btn-list  btn  btn--display-settings"><i class="fas fa-list"></i></button>
+        <input type="radio" name="shop-view-type" class="shop__display-radio-grid"/>
+        <button class="shop__display-btn-grid  btn  btn--display-settings"><i class="fas fa-th"></i></button>
+        <div class="shop-product-area">
+          <div class="product">
+            <div class="product__img-block"><img src="images/products/desctop-pc.png" class="product__img"/></div>
+            <div class="product__text-block">
+              <h3 class="product__title">Product name</h3>
+              <p class="product__description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="product__description-extended">Earum soluta officiis, voluptate minus tenetur itaque, fugit illum, dolorem aspernatur quisquam dicta id distinctio voluptatum placeat. Cumque molestias, numquam atque adipisci. Ducimus numquam placeat asperiores consectetur cumque voluptate aperiam provident, corrupti soluta expedita praesentium suscipit quisquam. Maiores, blanditiis aliquid aut. Vitae.</span></p><span class="product__price">70 &#8364;</span>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img-block"><img src="images/products/Samsung Laptop.png" class="product__img"/></div>
+            <div class="product__text-block">
+              <h3 class="product__title">Product name</h3>
+              <p class="product__description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="product__description-extended">Earum soluta officiis, voluptate minus tenetur itaque, fugit illum, dolorem aspernatur quisquam dicta id distinctio voluptatum placeat. Cumque molestias, numquam atque adipisci. Ducimus numquam placeat asperiores consectetur cumque voluptate aperiam provident, corrupti soluta expedita praesentium suscipit quisquam. Maiores, blanditiis aliquid aut. Vitae.</span></p><span class="product__price">70 &#8364;</span>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img-block"><img src="images/products/Microsoft-Surface-Pro-4.png" class="product__img"/></div>
+            <div class="product__text-block">
+              <h3 class="product__title">Product name</h3>
+              <p class="product__description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="product__description-extended">Earum soluta officiis, voluptate minus tenetur itaque, fugit illum, dolorem aspernatur quisquam dicta id distinctio voluptatum placeat. Cumque molestias, numquam atque adipisci. Ducimus numquam placeat asperiores consectetur cumque voluptate aperiam provident, corrupti soluta expedita praesentium suscipit quisquam. Maiores, blanditiis aliquid aut. Vitae.</span></p><span class="product__price">70 &#8364;</span>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img-block"><img src="images/products/Fire-Tablet.png" class="product__img"/></div>
+            <div class="product__text-block">
+              <h3 class="product__title">Product name</h3>
+              <p class="product__description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="product__description-extended">Earum soluta officiis, voluptate minus tenetur itaque, fugit illum, dolorem aspernatur quisquam dicta id distinctio voluptatum placeat. Cumque molestias, numquam atque adipisci. Ducimus numquam placeat asperiores consectetur cumque voluptate aperiam provident, corrupti soluta expedita praesentium suscipit quisquam. Maiores, blanditiis aliquid aut. Vitae.</span></p><span class="product__price">70 &#8364;</span>
+            </div>
+          </div>
+        </div>
+        <div class="shop-breadcrumbs">
+          <button class="btn--breadcrumbs"><i class="fas fa-caret-left"></i></button>
+          <button class="btn--breadcrumbs  btn--breadcrumbs-active">1</button>
+          <button class="btn--breadcrumbs">2</button>
+          <button class="btn--breadcrumbs">3</button>
+          <button class="btn--breadcrumbs">...</button>
+          <button class="btn--breadcrumbs  btn--breadcrumbs-last">Last</button>
+          <button class="btn--breadcrumbs"><i class="fas fa-caret-right"></i></button>
+        </div>
+      </main>
+      <div class="footer">
+        <div class="footer__content-area  content-wrapper-outer  center-block">
+          <div class="footer__social-area">
+            <div class="footer__social-block">
+              <input type="email" placeholder="Enter email for weekly newsletter" class="input-text"/>
+              <button class="footer__sign-up-btn  btn  btn--submit">Sign Up</button>
+            </div>
+            <div class="footer__social-block  push-to-right">
+              <i class="footer__social-link  fab fa-facebook-f"></i>
+              <i class="footer__social-link  fab fa-twitter"></i>
+              <i class="footer__social-link  fab fa-youtube"></i>
+              <i class="footer__social-link  fab fa-instagram"></i>
+            </div>
+          </div>
+          <div class="section-divider"></div>
+          <div class="footer__link-area">
+            <div class="footer__link-block">
+              <h3>Categories</h3><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a>
+            </div>
+            <div class="footer__link-block">
+              <h3>Services</h3><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a>
+            </div>
+            <div class="footer__link-block">
+              <h3>Get to know us</h3><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a>
+            </div>
+            <div class="footer__link-block">
+              <h3>Partner with us</h3><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a>
+            </div>
+            <div class="footer__link-block">
+              <h3>In The Spotlight</h3><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#" class="footer__link">Link</a>
+            </div>
+          </div>
+          <div class="section-divider"></div>
+          <div class="footer__copyright">
+            <p>&copy 2019 copyright information</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

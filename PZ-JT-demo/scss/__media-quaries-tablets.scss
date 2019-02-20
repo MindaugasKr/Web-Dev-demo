@@ -1,0 +1,108 @@
+@media screen and (min-width: ($mobile + 1px) ) and (max-width: $tablet) {
+    @supports (display:grid) and ((writing-mode: tb) or (writing-mode: vertical-lr)) {
+        .main-grid {
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+
+            display: grid;
+            grid-template-columns: 1fr  min-content 1fr;
+            grid-template-rows: repeat(4, min-content) auto repeat(2, min-content);
+            grid-template-areas:
+    " ... hp hs "
+    " ... hp ... "
+    " ht hp ... "
+    " nav nav nav "
+    " text text text "
+    " social social social "
+    " footer footer footer ";
+        }
+
+        .header__primary {
+            writing-mode: tb;
+            writing-mode: vertical-lr;
+
+            transform: rotateZ(180deg);
+
+            font-size: 80px;
+        }
+        .header__secondary {
+            font-size: 50px;
+        }
+        .header__tertiary {
+            font-size: 30px;
+            justify-self: end;
+            text-align: right;
+        }
+
+        .nav {
+            text-align: center;
+        }
+
+        /* decorations: */
+        .decor-container-tablet-grid {
+            display: block;
+
+            overflow: hidden;
+
+            grid-column: 1/4;
+            grid-row: 1/4;
+
+            display: grid;
+
+            /* outer columns for centering content */
+            grid-template-columns: auto repeat(3, $mobile/3) auto;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            " ... ... ... ... ... "
+            " ... ... ... ... ... "
+            " ... ... ... ... ... "
+            ;
+        }
+        .decor-container-tablet {display: block;}
+            [class*="--bar-horiz"] {height: 15px;}
+            [class*="--bar-vert"] {width: 15px;}
+            [class*="--dashed-horiz"] {border-top-width: 4px;}
+            [class*="--dashed-vert"] {border-left-width: 4px;}
+            /* lines crossing DESIGN and green dashed */
+            .decor-child-t-1 {
+                left: calc(50% - 40px);
+            }
+            .decor-child-t-2 {
+                top: -10px;
+                right: calc(50% - 22px);
+            }
+            .decor-child-t-3 {
+                bottom: 40px;
+                left: calc(50% - 22px);
+            }
+            /*  */
+            .decor-child-t-4 {
+                top: 25%;
+            }
+            /* squares */
+            .decor-child-t-5 {
+                left: 20%;
+                bottom: 0;
+                width: 55%;
+            }
+            .decor-child-t-6 {
+                right: 0;
+                top: 0;
+            }
+            /* gray at top left */
+            .decor-child-t-8 {
+                left: 0;
+                bottom: 85px;
+            }
+            .decor-child-t-9 {
+                right: 0;
+                bottom: 30px;
+            }
+            .decor-child-t-10 {
+                right: 0;
+                bottom: 50px;
+                height: 30px;
+            }
+    }
+}

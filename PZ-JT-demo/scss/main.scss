@@ -1,0 +1,268 @@
+// compileExpanded: /../../css/PZ-JT.css
+
+/*------------------------------------*\
+  #SECTION- normalise
+\*------------------------------------*/
+
+
+//------------------------------------
+//  #SECTION- variables
+//------------------------------------
+$mobile: 414px;
+$tablet: 800px;
+$pc-big: 1050px;
+
+//------------------------------------
+//  #SECTION- functions
+//------------------------------------
+@import "__functions.scss";
+
+/*------------------------------------*\
+  #SECTION- normalise
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+  #SECTION- Project Meta
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+  #SECTION- reset / changing defoults
+\*------------------------------------*/
+
+@import "__resets.scss";
+
+/*------------------------------------*\
+  #SECTION- Color scheme
+\*------------------------------------*/
+@import "__colors.scss";
+
+/*------------------------------------*\
+  #SECTION- general
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+  #SECTION- typography
+\*------------------------------------*/
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*------------------------------------*\
+  #SECTION- grid
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+  #SECTION- templates
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+  #SECTION- parts
+\*------------------------------------*/
+
+/* Main grid block */
+.main-grid {
+    padding: 30px 60px;
+}
+
+/* Header */
+.header__primary {
+    font-weight: 800;
+    font-size: 80px;
+
+    display: block;
+
+    grid-area: hp;
+}
+.header__secondary {
+    font-weight: 600;
+    font-size: 60px;
+
+    grid-area: hs;
+}
+.header__tertiary {
+    font-weight: 400;
+    font-size: 40px;
+
+    grid-area: ht;
+}
+
+/* header__secondary as separate elements */
+.hs-1 {grid-area: hs-1;}
+.hs-2 {grid-area: hs-2;}
+.hs-3 {grid-area: hs-3;}
+.hs-4 {grid-area: hs-4;}
+
+[class^="hs-"] {
+    display: none;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+/* header__tertiary as separate elements */
+.ht-1 {grid-area: ht-1;}
+.ht-2 {grid-area: ht-2;}
+.ht-3 {grid-area: ht-3;
+}
+
+[class^="ht-"] {
+    display: none;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+/* Navigation */
+.nav {
+    background-color: color(accent1);
+
+    grid-area: nav;
+}
+    .nav__btn {
+        background-color: color(accent1);
+        display: inline-block;
+        padding: 8px 16px;
+        border: none;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 1px;
+    }
+        .nav__btn:hover {
+            background-color: color(accent1-lighter);
+        }
+
+/* Text on landing page */
+.landing-paragrapth {
+    display: inline-block;
+    width: 100%;
+    grid-area: text;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    line-height: 1.5;
+}
+
+/* Social media block */
+.social-block {
+    padding: 8px 16px;
+
+    grid-area: social;
+}
+    .social-link {
+        color: color(social);
+        display: inline-block;
+        font-size: 22px;
+        padding: 3px;
+    }
+        .social-link:hover {
+            color: gray;
+        }
+
+/* Footer */
+.footer {
+    color: white;
+    background-color: gray;
+    padding: 8px 16px;
+
+    grid-area: footer;
+}
+
+/* Decorations - lines and squares */
+/* box-shadow it works:
+*
+*    position CONTAINER in cell where you want
+*    decorative element to be placed
+*
+*    div container must have name base on use
+*    [decor-container] .......
+*
+*    child div must have unique name
+*    [decor-child]...
+*
+*    give div child apropriate classes
+*
+*    fine tune child element in @media
+*/
+[class^="decor-container"] {
+    display: none;
+    position: relative;
+    z-index: -2;
+    align-self: stretch;
+    justify-self: stretch;
+}
+.decor {
+    position: absolute;
+    z-index: -1;
+
+    /* for bar lines and squares */
+    &--accent1 {background-color: color(accent1);}
+    &--accent2 {background-color: color(accent2);}
+    &--accent3 {background-color: color(accent3);}
+        /* for bar lines */
+        &--bar-horiz {
+            width: 100vw;
+            height: 20px;
+        }
+        &--bar-vert {
+            height: 100vh;
+            width: 20px;
+        }
+        /* for squares */
+        &--square-small {
+            width: 25%;
+            height: 25%;
+        }
+        &--square-mid {
+            width: 75%;
+            height: 75%;
+        }
+        &--square-big {
+            width: 100%;
+            height: 100%;
+        }
+    /* for dashed lines */
+    &--dashed-vert {
+        width: 1px;
+        height: 100vh;
+        border-left-style: dashed;
+        border-left-width: 5px;
+    }
+    &--dashed-horiz {
+        height: 1px;
+        width: 100vw;
+        border-top-style: dashed;
+        border-top-width: 5px;
+    }
+    &--b-accent1 {
+        border-color: color(accent1);
+    }
+    &--b-accent2 {
+        border-color: color(accent2);
+    }
+    &--b-accent3 {
+        border-color: color(accent3);
+    }
+}
+
+
+/*------------------------------------*\
+  #SECTION- Media Queries
+\*------------------------------------*/
+
+/* for mobile */
+@import "__media-quaries-mobile.scss";
+/* for wide mobile and narrot tablets */
+@import "__media-quaries-tablets.scss";
+/* for narrow PC / tablets / kindle */
+@import "__media-quaries-pc-small.scss";
+/* for desktop */
+@import "__media-quaries-pc-big.scss";
+
+
+/*------------------------------------*\
+  #SECTION- animations
+\*------------------------------------*/

@@ -1,0 +1,27 @@
+.grid-main {
+    display: grid;
+
+    grid-template-columns: minmax(0, auto) minmax(0, $max-width-content) minmax(0, auto);
+    grid-template-rows: repeat(3, min-content) auto min-content;
+
+    grid-template-areas:
+    " top-bar top-bar       top-bar "
+    " ...     ad-area       ... "
+    " ...     top-nav       ... "
+    " ...     shopping-area ... "
+    " footer  footer        footer "
+    ;
+}
+.grid-shopping-area {
+    display: grid;
+
+    grid-template-columns: min-content 1fr 1fr;
+
+    //grid-template-rows: min-content;
+
+    grid-template-areas:
+    " filters settings    search "
+    " filters product     product "
+    " filters breadcrumbs breadcrumbs "
+    ;
+}

@@ -1,0 +1,143 @@
+.site-logo {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 28px;
+    padding: 2px 0;
+    white-space: nowrap;
+}
+
+.btn {
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+
+    &--top-bar {
+        color: lightgray;
+        display: block;
+        padding: 10px 10px;
+        background-color: inherit;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &--submit {
+        border: none;
+        color: white;
+        background-color: black;
+        height: $t-input-and-btn-height;
+
+        &:hover {
+            background-color: red;
+        }
+    }
+
+    &--CTA {
+        //border: solid 2px white;
+        border-radius: 50px;
+        padding: 10px 50px;
+        background-color: rgb(17, 61, 128);
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 18px;
+
+        &:hover {
+            color: rgb(17, 61, 128);
+            background-color: white;
+        }
+    }
+
+    /* for slide shows to move between slides */
+    &--slide-o {
+        $size: 20px;
+        width: $size;
+        height: $size;
+        border: solid 5px white;
+        border-radius: 50px;
+        background-color: rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+
+        &:focus {
+            background-color: white;
+        }
+        &:hover {
+            border-color: rgb(240, 240, 240);
+        }
+    }
+
+    $breadcrumbs-width-and-height: 30px;
+    &--breadcrumbs {
+        width: $breadcrumbs-width-and-height;
+        height: $breadcrumbs-width-and-height;
+        border: solid 1px lightgray;
+
+        &:hover {
+            background-color: white;
+        }
+    }
+    &--breadcrumbs-last {
+        width: $breadcrumbs-width-and-height * 2;
+    }
+    &--breadcrumbs-active {
+        background-color: tomato;
+    }
+
+    &--display-settings {
+        border: solid 1px lightgray;
+    }
+}
+
+.section-divider {
+    width: 100%;
+    margin: 20px 0;
+    border-top: solid 1px lightgray;
+
+    &--invisible {
+        border-color: transparent;
+    }
+}
+
+.input-text {
+    border: none;
+    background-color: rgb(246, 246, 246);
+    padding: 5px 10px;
+    //min-width: 300px;
+    min-width: 280px;
+    height: $t-input-and-btn-height;
+
+    &:hover,
+    &:focus {
+        box-shadow: inset 0 0 0 1px lightgray;
+    }
+}
+
+/* Custom checkbox / radio.
+*  using font awesome icons
+*/
+.checkbox-container {
+    padding-left: 22px;
+    position: relative;
+}
+    .checkbox {
+        opacity: 0;
+
+        &:checked ~ .checkmark--0 {
+            display: none;
+        }
+        &:checked ~ .checkmark--1 {
+            display: block;
+        }
+    }
+    .checkmark {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: green;
+
+        &--0 {}
+        &--1 {display: none;}
+    }

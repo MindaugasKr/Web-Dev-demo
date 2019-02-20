@@ -1,0 +1,64 @@
+/* To be used with structure:
+class="drop-btn"
+    button: Drop down
+    class="drop-container"
+        item
+        item
+        class="slide-btn"
+            button: Slide left &#187;
+            class="drop-container"
+                item
+                item
+                item
+        item
+*/
+.drop-btn,
+.slide-btn {
+    position: relative;
+}
+    .drop-container {
+        display: none;
+        position: absolute;
+    }
+
+
+    .slide-btn > .drop-container:first-of-type {
+        left: 100%;
+        top: 0;
+    }
+
+
+    .drop-btn:hover > .drop-container:first-of-type {
+        display: block;
+        top: 100%;
+        left: 0;
+    }
+    .slide-btn:hover > .drop-container:first-of-type {
+        display: block;
+        left: 100%;
+        top: 0;
+    }
+
+.background-img {
+    position: relative;
+    z-index: -1;
+
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+.background-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    //background-color: cyan;
+    z-index: -1;
+
+    background-image: linear-gradient(45deg, rgb(52, 33, 205),  rgb(131, 26, 214));
+
+    -webkit-clip-path: polygon(0 70%, 36% 51%, 70% 56%, 100% 40%, 100% 0, 0% 0%);
+    clip-path: polygon(0 70%, 36% 51%, 70% 56%, 100% 40%, 100% 0, 0% 0%);
+}
