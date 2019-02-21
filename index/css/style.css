@@ -1,0 +1,33 @@
+.index-link-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.index-demo-link {
+  color: black;
+  font-family: Arial;
+  text-align: center;
+  display: block;
+  padding: 20px 40px;
+  border: solid 1px #f2f2f2;
+  border-bottom: none; }
+  .index-demo-link:last-of-type {
+    border-bottom: solid 1px #f2f2f2; }
+  .index-demo-link:hover {
+    background-color: #f2f2f2; }
+
+/*------------------------------------*\
+  #SECTION- reset / changing defoults
+\*------------------------------------*/
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+body, button, p, h1, h2, h3, h4, h5, h6, ul {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

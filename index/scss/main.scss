@@ -1,0 +1,33 @@
+.index-link-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.index-demo-link {
+    $lightgray: rgb(242, 242, 242);
+    $border: solid 1px $lightgray;
+
+    color: black;
+    font-family: Arial;
+    text-align: center;
+
+    display: block;
+    padding: 20px 40px;
+    border: $border;
+    border-bottom: none;
+
+    &:last-of-type {
+        border-bottom: $border;
+    }
+
+    &:hover {
+        background-color: $lightgray;
+    }
+}
+
+/*------------------------------------*\
+  #SECTION- reset / changing defoults
+\*------------------------------------*/
+
+@import "__resets.scss";
