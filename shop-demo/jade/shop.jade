@@ -11,3 +11,147 @@ html
             include page-parts/footer.jade
             
         include ../../common/overlay/overlay.jade
+    script.
+        if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) ) {
+          //if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1)) {};
+          function styleMany(styleJobs) {
+            /*
+            applies any number of styles to all elements with specified class
+
+            loop over jobs
+              loop over same class items
+                loop over all styles
+            */
+            // loop over jobs;
+            var lenStyleJobs = styleJobs.length;
+            for (var x = 0; x < lenStyleJobs; x++) {
+              var job = styleJobs[x];
+              var elements = document.getElementsByClassName(job.className);
+              var len = elements.length;
+              // loop over same class elements
+              for (var i = 0; i < len; i++) {
+                // loop over all style changes;
+                for (style in job.styles) {
+                  elements[i].style[style] = job.styles[style];
+                }
+              }
+            }
+          }
+
+          styleMany(
+            [
+              {
+                className: "top-nav__btn",
+                styles: {
+                  'backgroundColor': "white"
+                }
+              },
+              {
+                className: "shopping-area",
+                styles: {
+                  'padding': "30px 15px",
+                  'display': "block",
+                  'position': "relative"
+                }
+              },
+              {
+                className: "shop__display-radio-grid",
+                styles: {
+                  'position': "absolute",
+                  'left': "250px"
+                }
+              },
+              {
+                className: "shop__display-btn-grid",
+                styles: {
+                  'position': "absolute",
+                  'left': "250px",
+                  'zIndex': "-1"
+                }
+              },
+              {
+                className: "shop__display-radio-list",
+                styles: {
+                  'position': "absolute",
+                  'left': "310px"
+                }
+              },
+              {
+                className: "shop__display-btn-list",
+                styles: {
+                  'position': "absolute",
+                  'left': "310px",
+                  'zIndex': "-1"
+                }
+              },
+              {
+                className: "shop-search-area",
+                styles: {
+                  'display': "block",
+                  'float': "right"
+                }
+              },
+              {
+                className: "shop-filter-area",
+                styles: {
+                  'float': "left",
+                  'width': "250px"
+                }
+              },
+              {
+                className: "shop-product-area",
+                styles: {
+                  'display': "block",
+                  'float': "left",
+                  'maxWidth': "calc( 100% - 250px - 50px )"
+                }
+              },
+              {
+                className: "product",
+                styles: {
+                  'display': "block",
+                  'clear': "both"
+                }
+              },
+              {
+                className: "product__img",
+                styles: {
+                  'height': "auto",
+                  'width': 'auto',
+                  'maxHeight': '200px',
+                  'maxWidth': '200px'
+                }
+              },
+              {
+                className: "product__img-block",
+                styles: {
+                  'float': "left",
+                  'display': "block",
+                  'marginRight': '20px',
+                  'textAlign': 'center'
+                }
+              },
+              {
+                className: "shop-breadcrumbs",
+                styles: {
+                  'display': "block",
+                  'textAlign': "center",
+                  'margin': "20px",
+                  'clear': "both"
+                }
+              },
+              {
+                className: "footer",
+                styles: {
+                  'paddingTop': "10px"
+                }
+              },
+              {
+                className: "footer__copyright",
+                styles: {
+                  'paddingBottom': "20px"
+                }
+              }
+            ]
+          );
+        };
