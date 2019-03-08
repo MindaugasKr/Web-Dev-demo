@@ -73,5 +73,5 @@ window.onload = slideShow(slideClassName = 'ad__slide',
                           buttonContainerName = 'ad__btn-container',
                           buttonClasses = 'btn--slide-o',
                           transitionDuration = "0.5s",
-                          displayDuration = 1000,
+                          displayDuration = 1000, // milliseconds;
                           intervalName = "adSlideShowInterval");

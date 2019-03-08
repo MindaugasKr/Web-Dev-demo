@@ -139,47 +139,6 @@ $color: (
                 color: red;
             }
             .ad__img {max-height: 80%;}
-    // TODO: delete after making js slide show
-    .ad__slide-btn-1,
-    .ad__slide-btn-2,
-    .ad__slide-btn-3 {
-        position: absolute;
-        bottom: 20px;
-        z-index: 10;
-    }
-    // TODO: delete after making js slide show
-    .ad__slide-btn-1 {left: calc(50% - 30px);}
-    .ad__slide-btn-2 {left: 50%;}
-    .ad__slide-btn-3 {left: calc(50% + 30px);}
-        // TODO: delete after making js slide show
-        .ad__slide-btn-1:focus ~.ad__slideshow {
-            animation: none;
-            margin-left: 0%;
-        }
-        // TODO: delete after making js slide show
-        .ad__slide-btn-2:focus ~.ad__slideshow {
-            animation: none;
-            margin-left: -100%;
-        }
-        // TODO: delete after making js slide show
-        .ad__slide-btn-3:focus ~.ad__slideshow {
-            animation: none;
-            margin-left: -200%;
-        }
-
-    // TODO: delete after making js slide show
-    .ad__slideshow {
-        $ad-slideshow-view-t: 3s !global;
-        $ad-slideshow-transition-t: 1s !global;
-        $ad-slideshow-return-t: 1s;
-        $ad-slideshow-total-t:
-            ($ad-slideshow-view-t * 3) +
-            ($ad-slideshow-transition-t * 2) +
-            $ad-slideshow-return-t !global;
-        animation: slideshow $ad-slideshow-total-t;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
 
 
 .top-nav {
@@ -421,19 +380,3 @@ $color: (
 /*------------------------------------*\
   #SECTION- animations
 \*------------------------------------*/
-
-// TODO: delete after making js slide show
-@keyframes slideshow {
-    // view duration in percent
-    $Rp: 100% * $ad-slideshow-view-t / $ad-slideshow-total-t;
-    // transition time in ercent
-    $Kp: 100% * $ad-slideshow-transition-t / $ad-slideshow-total-t ;
-
-    0% {margin-left: 0%;}
-    #{$Rp} {margin-left: 0%;}
-    #{($Rp + $Kp)} {margin-left: -100%;}
-    #{(($Rp * 2) + $Kp)} {margin-left: -100%;}
-    #{(($Rp * 2) + ($Kp * 2))} {margin-left: -200%;}
-    #{(($Rp * 3) + ($Kp * 2))} {margin-left: -200%;}
-    100% {margin-left: 0%;}
-}
