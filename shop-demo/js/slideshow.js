@@ -1,18 +1,16 @@
 function slideShow(slideClassName, buttonContainerName, buttonClasses, transitionDuration, displayDuration, intervalName) {
 
   /*
-    Goes over html elements with specified class name, in order.
-    After reatching last - returns to first.
+    Slideshow functionality:
+        Goes over html elements with specified class name, in order.
+        After reatching last - returns to first.
 
-    Slides transition using animated margin on first slide.
+    How slide change:
+        Slides transition using animated margin on first slide.
 
-    Slide elements must be on same line and width 100% of container element.
-    Container element must have overflow hidden.
-  */
-
-  /* TODO:
-        istrynti nebereikalingus mygtukus is html
-        istrynti nereikalingas klases is css
+    HTML prerequiite:
+        Slide elements must be on same line and width 100% of container element.
+        Container element must have overflow hidden.
   */
 
   // set variables;
@@ -52,7 +50,7 @@ function slideShow(slideClassName, buttonContainerName, buttonClasses, transitio
     }
   }
 
-  // expression that makes slide slide from one to another;
+  // expression that makes slides slide from one to another;
   function slideChange(index) {
     slideList[0].style.marginLeft = (-100 * index) + '%';
   }
