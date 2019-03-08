@@ -140,6 +140,15 @@ $color: (
             }
             .ad__img {max-height: 80%;}
 
+    .ad__btn-container {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: magenta;
+    }
+
+
 
 .top-nav {
     grid-area: top-nav;
