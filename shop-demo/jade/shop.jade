@@ -11,6 +11,7 @@ html
             include page-parts/footer.jade
             
         include ../../common/overlay/overlay.jade
+    script(src="js/slideshow.js")
     script.
         if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) ) {
           //if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1)) {};

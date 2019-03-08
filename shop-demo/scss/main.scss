@@ -139,6 +139,7 @@ $color: (
                 color: red;
             }
             .ad__img {max-height: 80%;}
+    // TODO: delete after making js slide show
     .ad__slide-btn-1,
     .ad__slide-btn-2,
     .ad__slide-btn-3 {
@@ -146,22 +147,27 @@ $color: (
         bottom: 20px;
         z-index: 10;
     }
+    // TODO: delete after making js slide show
     .ad__slide-btn-1 {left: calc(50% - 30px);}
     .ad__slide-btn-2 {left: 50%;}
     .ad__slide-btn-3 {left: calc(50% + 30px);}
+        // TODO: delete after making js slide show
         .ad__slide-btn-1:focus ~.ad__slideshow {
             animation: none;
             margin-left: 0%;
         }
+        // TODO: delete after making js slide show
         .ad__slide-btn-2:focus ~.ad__slideshow {
             animation: none;
             margin-left: -100%;
         }
+        // TODO: delete after making js slide show
         .ad__slide-btn-3:focus ~.ad__slideshow {
             animation: none;
             margin-left: -200%;
         }
 
+    // TODO: delete after making js slide show
     .ad__slideshow {
         $ad-slideshow-view-t: 3s !global;
         $ad-slideshow-transition-t: 1s !global;
@@ -174,6 +180,7 @@ $color: (
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
+
 
 .top-nav {
     grid-area: top-nav;
@@ -415,6 +422,7 @@ $color: (
   #SECTION- animations
 \*------------------------------------*/
 
+// TODO: delete after making js slide show
 @keyframes slideshow {
     // view duration in percent
     $Rp: 100% * $ad-slideshow-view-t / $ad-slideshow-total-t;

@@ -30,14 +30,14 @@
               a(class="btn  btn--top-bar" href="#") <i class="far fa-comment"></i> Contact us
       -->
       <div class="ad-area">
-        <button class="btn--slide-o  ad__slide-btn-1"></button>
-        <button class="btn--slide-o  ad__slide-btn-2"></button>
-        <button class="btn--slide-o  ad__slide-btn-3"></button>
+        <!-- button(class="btn--slide-o  ad__slide-btn-1")-->
+        <!-- button(class="btn--slide-o  ad__slide-btn-2")-->
+        <!-- button(class="btn--slide-o  ad__slide-btn-3")-->
         <!-- slides:-->
         <!-- css tuned for 3 slides,-->
         <!-- adding, rmoving slides woud require-->
         <!-- to modify css         -->
-        <div class="ad__slide  ad__slide--back1  ad__slideshow">
+        <div class="ad__slide  ad__slide--back1  ad__slideshow__delete">
           <!-- ad__content-block exist because-->
           <!-- ad__slide is inline block-->
           <!-- ad__content-block is flex-->
@@ -64,6 +64,7 @@
             </div><img src="images/580b57fbd9996e24bc43bfa4.png" class="ad__img"/>
           </div>
         </div>
+        <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: magenta;" class="ad__btn-container"></div>
       </div>
       <div class="top-nav">
         <button class="top-nav__btn">Link</button>
@@ -252,6 +253,7 @@
       </div>
     </div>
   </body>
+  <script src="js/slideshow.js"></script>
   <script>
     if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) ) {
       //if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1)) {};
