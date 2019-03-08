@@ -196,7 +196,8 @@ class="drop-btn"
     border: solid 5px white;
     border-radius: 50px;
     background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+    margin: 0 5px; }
     .btn--slide-o:focus {
       background-color: white; }
     .btn--slide-o:hover {
@@ -376,8 +377,7 @@ class="drop-btn"
   position: absolute;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
-  background-color: magenta; }
+  transform: translateX(-50%); }
 
 .top-nav {
   grid-area: top-nav;
