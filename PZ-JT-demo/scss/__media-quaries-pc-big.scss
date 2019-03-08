@@ -52,3 +52,14 @@
         }
     }
 }
+// for EDGE;
+@media screen and (min-width: $pc-big) {
+    @supports (-ms-accelerator:true) or (-ms-ime-align:auto) {
+      body {
+          padding-left: 60px;
+      }
+      .landing-paragrapth {
+          writing-mode: initial;
+      }
+    }
+}

@@ -14,7 +14,7 @@ function slideShow(slideClassName, buttonContainerName, buttonClasses, transitio
   */
 
   // set variables;
-  var i = 0;
+  var i = 1;
   var slideList = document.getElementsByClassName(slideClassName);
 
   // defoult parameters, because IE...
@@ -71,5 +71,5 @@ window.onload = slideShow(slideClassName = 'ad__slide',
                           buttonContainerName = 'ad__btn-container',
                           buttonClasses = 'btn--slide-o',
                           transitionDuration = "0.5s",
-                          displayDuration = 1000, // milliseconds;
+                          displayDuration = 7000, // milliseconds;
                           intervalName = "adSlideShowInterval");

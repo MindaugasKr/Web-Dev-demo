@@ -563,6 +563,13 @@ html {
     .decor-child-4 {
       bottom: 20px;
       right: 0; } } }
+@media screen and (min-width: 1050px) {
+  @supports (-ms-accelerator: true) or (-ms-ime-align: auto) {
+    body {
+      padding-left: 60px; }
+
+    .landing-paragrapth {
+      writing-mode: initial; } } }
 /*------------------------------------*\
   #SECTION- animations
 \*------------------------------------*/
